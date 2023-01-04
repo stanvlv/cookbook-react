@@ -11,7 +11,7 @@ export default function Image ({id}) {
    
         axios
         .get(`https://cdn.contentful.com/spaces/mtjp1adh4yfh/environments/master/assets/${id}?access_token=3o4XsXdz9bndgQIjzV8QzAeu2c2qK18qaw9eT8sCvYA`)
-        .then(response => setImage(response.data))
+        .then(response => setImage(response.data.fields.file.url))
         .catch(error => console.log(error))
     }, [])
   

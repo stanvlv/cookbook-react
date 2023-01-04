@@ -23,7 +23,6 @@ export default function Data () {
          <div>
       <h2>{recipe.fields.title}</h2>
          <Image id={recipe.fields.picture.sys.id} />
-         <h3>{recipe.fields.picture.sys.id}</h3>
       </div>
       )
    })}
