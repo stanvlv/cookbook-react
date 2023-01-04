@@ -1,68 +1,41 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
-
+import React from "react";
+import {
+  Button,
+  Container,
+  Form,
+  Nav,
+  Navbar,
+  NavDropdown
+} from 'react-bootstrap';
 
 export default function Header() {
-
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src=""
-                alt="First slide"
+    <div>
+      <Navbar bg="dark" expand="lg" variant="dark">
+        <Container fluid>
+          <Navbar.Brand href="#home">Home</Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Nav.Link href="#action1">Home</Nav.Link>
+              <Nav.Link href="#action2">Link</Nav.Link>
+            </Nav>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
               />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>
-                  ZZZ Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-              </Carousel.Caption>
-              <Button>More</Button>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://unsplash.com/photos/yb6bm_66Jdk"
-                alt="Second slide"
-              />
-
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>
-                  XXX Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-              </Carousel.Caption>
-              <Button>More</Button>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="holder.js/800x400?text=Third slide&bg=20232a"
-                alt="Third slide"
-              />
-
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </Carousel.Caption>
-              <Button>More</Button>
-            </Carousel.Item>
-            <Button>More</Button>
-          </Carousel>
-        </Col>
-      </Row>
-    </Container>
+              <Button variant="outline-light">Search</Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
 }
