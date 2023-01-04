@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
 
 
 export default function Header() {
@@ -27,6 +27,7 @@ export default function Header() {
                   ZZZ Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 </p>
               </Carousel.Caption>
+              <Button>More</Button>
             </Carousel.Item>
             <Carousel.Item>
               <img
@@ -41,6 +42,7 @@ export default function Header() {
                   XXX Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
               </Carousel.Caption>
+              <Button>More</Button>
             </Carousel.Item>
             <Carousel.Item>
               <img
@@ -55,7 +57,9 @@ export default function Header() {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
               </Carousel.Caption>
+              <Button>More</Button>
             </Carousel.Item>
+            <Button>More</Button>
           </Carousel>
         </Col>
       </Row>
