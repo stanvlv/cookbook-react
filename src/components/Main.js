@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Carousel, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Recipes from "./Recipes";
+import Categories from "./Categories";
 
 export default function Main() {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
+
   };
 
   return (
@@ -27,7 +28,7 @@ export default function Main() {
                   <p>
                     Nulla vitae elit libero, a pharetra augue mollis interdum.
                   </p>
-                  <Button variant="dark">More</Button>
+                  <Button  variant="dark">More</Button>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -93,7 +94,7 @@ export default function Main() {
           </Col>
         </Row>
         <Row>
-          <Recipes />
+          <Categories />
         </Row>
       </Container>
     </div>

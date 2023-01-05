@@ -11,7 +11,7 @@ import { IconName } from "react-icons/bs";
 export default function Footer() {
   return (
     <div>
-      <Card className="text-center">
+      <Card className="text-center bg-dark text-white">
       <Card.Header></Card.Header>
       <Card.Body>
       <Container>
@@ -27,7 +27,7 @@ export default function Footer() {
         </Col>
       </Row>
     </Container>
-        <Card.Text>
+        <Card.Text className="sm">
           text below.
         </Card.Text>
       </Card.Body>
