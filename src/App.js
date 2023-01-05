@@ -4,7 +4,8 @@ import {useEffect, useState} from 'react'
 
 function App() {
 
-  const [recipes, setRecipes] = useState([])
+  
+  const [recipes, setRecipes] = useState([]) // eslint-disable-line no-unused-vars
 
   useEffect(() => { 
     data.getEntries()
