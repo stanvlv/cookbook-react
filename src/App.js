@@ -26,8 +26,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" exact element={<Main recipes={recipes}/>}/>
-        <Route path="/category/:category_name" element={<Recipes />} />
-        <Route path="/recipe/:recipe_id" element={<Recipe />} />
+        <Route path="/category/:category_name" element={<Recipes recipes={recipes}/>} />
+        <Route path="/recipe/:recipe_id" element={<Recipe recipes={recipes}/>} />
       </Routes>
       <Footer />
     </div>
