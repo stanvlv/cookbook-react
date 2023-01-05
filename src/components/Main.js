@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Categories from "./Categories";
 
 export default function Main() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0); // eslint-disable-line no-unused-vars
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
     setIndex(selectedIndex);
 
   };
