@@ -2,8 +2,11 @@ import './App.css';
 import Header from './components/Header'
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Recipes from './components/Recipes';
+import Recipe from './components/Recipe';
 import data from './Data'
 import {useEffect, useState} from 'react'
+import { Route, Routes } from 'react-router';
 
 function App() {
 
@@ -21,7 +24,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Routes>
+        <Route path="/" exact element={<Main />}/>
+        <Route path="/category/:category_name" element={<Recipes />} />
+        <Route path="/recipe/:recipe_id" element={<Recipe />} />
+      </Routes>
       <Footer />
     </div>
   );
