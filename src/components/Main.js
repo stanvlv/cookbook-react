@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Carousel, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Carousel, Button, Image } from "react-bootstrap"; // eslint-disable-line no-unused-vars
 import "bootstrap/dist/css/bootstrap.min.css";
 import Recipes from "./Recipes";
 
 export default function Main() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0); // eslint-disable-line no-unused-vars
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
     setIndex(selectedIndex);
   };
 

@@ -5,7 +5,7 @@ import {
   Form,
   Nav,
   Navbar,
-  NavDropdown
+  NavDropdown // eslint-disable-line no-unused-vars
 } from 'react-bootstrap';
 
 export default function Header() {

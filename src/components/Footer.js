@@ -6,7 +6,7 @@ import {
   Card,
 } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { IconName } from "react-icons/bs";
+import { IconName } from "react-icons/bs"; // eslint-disable-line no-unused-vars
 
 export default function Footer() {
   return (
