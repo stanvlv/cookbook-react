@@ -3,6 +3,7 @@ import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Categories from "./Categories";
+import '../App.css';
 
 export default function Main({ recipes }) {
   const [index, setIndex] = useState(0); // eslint-disable-line no-unused-vars
@@ -23,15 +24,17 @@ export default function Main({ recipes }) {
               {
                 recipes.map((item => {
                   return <Carousel.Item>
-                    <img
+                    <img 
+                      height={700}
+                                   
                       className="d-block w-100"
                       src={item.fields.picture.fields.file.url}
                       alt={item.fields.picture.fields.description}
                     />
-                    <Carousel.Caption>
-                      <h5>{item.fields.title}</h5>
+                    <Carousel.Caption className="caption">
+                      <h3 >{item.fields.title}</h3>
                       <NavLink to={`/recipe/${item.sys.id}`}>
-                        <Button  variant="dark">More</Button>
+                        <Button  variant="dark" bsSize="large">More</Button>
                       </NavLink>
                     </Carousel.Caption>
                   </Carousel.Item>

@@ -16,10 +16,10 @@ export default function Recipe({ recipes }) {
   console.log("recipe found: ", recipe)
 
   return (
-    <div>
+    <div className="recipe">
       <Row>
         <Col>
-            <Card>
+            <Card style={{ width: '50rem' }}>
               <Card.Img variant="top" src={recipe.fields.picture.fields.file.url} />
               <Card.Body>
                 <Card.Title>{recipe.fields.title}</Card.Title>
