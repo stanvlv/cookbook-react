@@ -17,7 +17,7 @@ export default function Header() {
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
           <Navbar.Brand href="/">
-            <img src={soup} style={{ height: 50 }} />
+            <img src={soup} style={{ height: 50 }} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">

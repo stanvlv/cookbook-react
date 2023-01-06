@@ -9,8 +9,7 @@ export default function Main({ recipes }) {
 
   console.log(recipes);
 
-  const handleSelect = (selectedIndex, e) => {
-    // eslint-disable-line no-unused-vars
+  const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
     setIndex(selectedIndex);
   };
 

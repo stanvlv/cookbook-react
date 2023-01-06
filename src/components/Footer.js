@@ -13,7 +13,7 @@ export default function Footer() {
           <Container>
             <Row>
               <Col id="footerLogo">
-                <img src={soup} style={{ height: 100 }} />
+                <img src={soup} style={{ height: 100 }} alt="" />
               </Col>
               <Col>
                 <h5>Presented to you by group 5:</h5>
