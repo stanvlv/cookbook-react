@@ -17,7 +17,7 @@ export default function Main({ recipes }) {
   return (
     <div>
       <Container>
-        <Row>
+        <Row className="carousel">
           <Col>
             <Carousel variant="dark">
               {

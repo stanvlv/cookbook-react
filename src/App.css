@@ -9,3 +9,7 @@
 .underline {
     text-decoration: underline;
 }
+
+.carousel {
+    height: 450;
+}
