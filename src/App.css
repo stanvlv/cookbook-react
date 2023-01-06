@@ -9,3 +9,7 @@
 .underline {
     text-decoration: underline;
 }
+
+#footerLogo {
+    align-self: center;
+}

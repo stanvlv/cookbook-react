@@ -5,14 +5,20 @@ import {
   Form,
   Nav,
   Navbar,
-} from 'react-bootstrap';
+  NavDropdown,
+} from "react-bootstrap";
+import soup from "./img/soup.png";
 
 export default function Header() {
+  const categories = ["Main", "Dessert", "Salad"];
+
   return (
     <div>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="#home">Home</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <img src={soup} style={{ height: 50 }} />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -20,8 +26,15 @@ export default function Header() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
+              <Nav.Link href="/">Home Page</Nav.Link>
+
+              <NavDropdown title="Categories" id="collasible-nav-dropdown">
+                {categories.map((cat, idx) => (
+                  <NavDropdown.Item href={`/category/${cat}`}>
+                    {cat}
+                  </NavDropdown.Item>
+                ))}
+              </NavDropdown>
             </Nav>
             <Form className="d-flex">
               <Form.Control

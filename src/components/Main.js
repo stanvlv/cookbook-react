@@ -9,9 +9,9 @@ export default function Main({ recipes }) {
 
   console.log(recipes);
 
-  const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
+  const handleSelect = (selectedIndex, e) => {
+    // eslint-disable-line no-unused-vars
     setIndex(selectedIndex);
-
   };
 
   return (
@@ -20,9 +20,9 @@ export default function Main({ recipes }) {
         <Row>
           <Col>
             <Carousel variant="dark">
-              {
-                recipes.map((item => {
-                  return <Carousel.Item>
+              {recipes.map((item) => {
+                return (
+                  <Carousel.Item>
                     <img
                       className="d-block w-100"
                       src={item.fields.picture.fields.file.url}
@@ -31,12 +31,12 @@ export default function Main({ recipes }) {
                     <Carousel.Caption>
                       <h5>{item.fields.title}</h5>
                       <NavLink to={`/recipe/${item.sys.id}`}>
-                        <Button  variant="dark">More</Button>
+                        <Button variant="dark">More</Button>
                       </NavLink>
                     </Carousel.Caption>
                   </Carousel.Item>
-                }))
-              }
+                );
+              })}
             </Carousel>
           </Col>
         </Row>
