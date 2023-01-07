@@ -12,9 +12,7 @@ export default function Categories() {
               <Card.Img variant="top" src="https://picsum.photos/60/20" />
               <Card.Body>
                 <Card.Title>Category Title</Card.Title>
-                <Button variant="dark">
-                  More
-                </Button>
+                <Button variant="dark">More</Button>
               </Card.Body>
             </Card>
           </Col>

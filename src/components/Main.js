@@ -6,6 +6,7 @@ import Categories from "./Categories";
 export default function Main() {
   const [index, setIndex] = useState(0); // eslint-disable-line no-unused-vars
 
+  // prettier-ignore
   const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
     setIndex(selectedIndex);
 
@@ -28,7 +29,7 @@ export default function Main() {
                   <p>
                     Nulla vitae elit libero, a pharetra augue mollis interdum.
                   </p>
-                  <Button  variant="dark">More</Button>
+                  <Button variant="dark">More</Button>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>

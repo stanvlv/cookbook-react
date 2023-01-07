@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  Form,
-  Nav,
-  Navbar,
-} from 'react-bootstrap';
+import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 
 export default function Header() {
   return (
