@@ -16,9 +16,7 @@ export default function Categories() {
               <Card.Body>
                 <Card.Title>{cat}</Card.Title>
                 <NavLink to={`/category/${cat}`}>
-                  <Button variant="dark">
-                    More
-                  </Button>
+                  <Button variant="dark">Show recipes</Button>
                 </NavLink>
               </Card.Body>
             </Card>

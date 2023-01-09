@@ -5,13 +5,15 @@ import {
   Form,
   Nav,
   Navbar,
+  NavDropdown,
 } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import data from "../Data";
 
-
 export default function Header({recipes}) {
 
+  const categories = ["Main", "Dessert", "Salad"];
+  
     const [searchInput, setSearchInput] = useState('')
     const [recipeTitle, setRecipeTitle] = useState([])
     const navigate = useNavigate()
@@ -36,7 +38,8 @@ export default function Header({recipes}) {
     <div>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="#home">Home</Navbar.Brand>
+          <Navbar.Brand href="/">
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -44,8 +47,15 @@ export default function Header({recipes}) {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
+              <Nav.Link href="/">Home Page</Nav.Link>
+
+              <NavDropdown title="Categories" id="collasible-nav-dropdown">
+                {categories.map((cat, idx) => (
+                  <NavDropdown.Item href={`/category/${cat}`}>
+                    {cat}
+                  </NavDropdown.Item>
+                ))}
+              </NavDropdown>
             </Nav>
             <Form className="d-flex" onSubmit={onSubmit}>
               <Form.Control
