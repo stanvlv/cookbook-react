@@ -13,12 +13,21 @@ import data from "../Data";
 export default function Header({recipes}) {
 
   const categories = ["Main", "Dessert", "Salad"];
-
-    const [searchInput, setSearchInput] = useState('')
-    const [recipeTitle, setRecipeTitle] = useState([])
-    const navigate = useNavigate()
+    
+  const [searchInput, setSearchInput] = useState('')
+  const [recipeTitle, setRecipeTitle] = useState([])
+   
+  const navigate = useNavigate()
+  const goBack = () => {
+    navigate(-1)
+  }
+  const goForward = () => {
+    navigate(+1)
+  }
    // console.log(recipes)
    
+
+
    console.log()
    const onSubmit = (e) => {
     e.preventDefault()
@@ -51,8 +60,10 @@ export default function Header({recipes}) {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
+            <Button variant="outline-light" onClick={goBack}>{'<'}</Button>
+            <Button variant="outline-light" onClick={goForward}>{'>'}</Button>
               <Nav.Link href="/">Home Page</Nav.Link>
-
+    
               <NavDropdown title="Categories" id="collasible-nav-dropdown">
                 {categories.map((cat, idx) => (
                   <NavDropdown.Item href={`/category/${cat}`}>
