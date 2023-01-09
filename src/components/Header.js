@@ -13,7 +13,7 @@ import data from "../Data";
 export default function Header({recipes}) {
 
   const categories = ["Main", "Dessert", "Salad"];
-  
+
     const [searchInput, setSearchInput] = useState('')
     const [recipeTitle, setRecipeTitle] = useState([])
     const navigate = useNavigate()
@@ -25,7 +25,11 @@ export default function Header({recipes}) {
     recipes.map((recipe) => {
       if(searchInput === recipe.fields.title.toLowerCase()) {
         return navigate(`/recipe/${recipe.sys.id}`)
-      } else { return console.log('no food for you')}
+      } 
+      if(searchInput === recipe.fields.category.toLowerCase()) {
+        return navigate(`./category/${recipe.fields.category}`)
+      }
+      else { return console.log('no food for you')}
       
      })
    
