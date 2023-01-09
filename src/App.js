@@ -23,7 +23,7 @@ function App() {
   // console.log(recipes)
   return (
     <div className="App">
-      <Header />
+      <Header recipes={recipes} />
       <Routes>
         <Route path="/" exact element={<Main recipes={recipes}/>}/>
         <Route path="/category/:category_name" element={<Recipes recipes={recipes}/>} />
