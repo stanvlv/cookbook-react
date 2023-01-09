@@ -49,7 +49,7 @@ function RichText({ content }) {
         ["list-item", "li"],
         ["table-row", "tr"],
         ["table-cell", "td"],
-        ["table-header-cell", "th"]
+        ["table-header-cell", "th"],
     ]);
     const NodeTag = nodeTypeToTagMap.get(content.nodeType);
     if (NodeTag) {
@@ -103,7 +103,6 @@ function RichText({ content }) {
             </table>
         );
     }
-    
     console.error("unknown rich text node type, ", content.nodeType);
     return <></>;
 }
