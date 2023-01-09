@@ -1,15 +1,17 @@
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .underline {
-    text-decoration: underline;
+
+  text-decoration: underline;
 }
 
 #footerLogo {
     align-self: center;
 }
+

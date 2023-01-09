@@ -103,7 +103,6 @@ function RichText({ content }) {
       </table>
     );
   }
-
   console.error("unknown rich text node type, ", content.nodeType);
   return <></>;
 }

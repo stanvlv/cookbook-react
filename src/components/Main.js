@@ -6,9 +6,9 @@ import Categories from "./Categories";
 
 export default function Main({ recipes }) {
   const [index, setIndex] = useState(0); // eslint-disable-line no-unused-vars
-
   console.log(recipes);
 
+  // prettier-ignore
   const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
     setIndex(selectedIndex);
   };

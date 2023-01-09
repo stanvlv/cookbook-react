@@ -5,9 +5,7 @@ import RichText from "./RichText";
 
 export default function Recipe({ recipes }) {
   const { recipe_id } = useParams();
-
   console.log(recipe_id);
-
   const recipe = recipes.find((val) => val.sys.id === recipe_id);
   console.log("recipe found: ", recipe);
 
