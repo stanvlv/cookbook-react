@@ -16,7 +16,7 @@ export default function Main({ recipes }) {
   };
 
   return (
-    <div>
+    <div className="carousel">
       <Container>
         <Row className="carousel">
           <Col>
@@ -25,7 +25,8 @@ export default function Main({ recipes }) {
                 recipes.map((item => {
                   return <Carousel.Item>
                     <img 
-                      height={700}
+                      height={400}
+                      width={400}
                                    
                       className="d-block w-100"
                       src={item.fields.picture.fields.file.url}

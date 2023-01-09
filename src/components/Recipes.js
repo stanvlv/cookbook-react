@@ -9,7 +9,7 @@ export default function Recipes({ recipes }) {
 
   return (
     <div>
-      <Row xs={1} md={3} className="g-4">
+      <Row xs={1} md={2} className="g-4">
         {recipes
         .filter((val) => val.fields.category === category_name)
         .map((val, idx) => (
