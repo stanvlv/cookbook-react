@@ -15,6 +15,7 @@ export default function Recipe({ recipes }) {
         <Col className="padding">
           <Card style={{ width: '50rem' }}>
             <Card.Img
+            style={{aspectRatio: 1.5 , objectFit : "cover"}}
               variant="top"
               src={recipe.fields.picture.fields.file.url}
             />

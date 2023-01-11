@@ -9,6 +9,7 @@ import {
 } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import data from "../Data";
+import {NavLink} from 'react-router-dom'
 
 export default function Header({recipes}) {
 
@@ -62,12 +63,12 @@ export default function Header({recipes}) {
             >
             <Button variant="outline-light" onClick={goBack}>{'<'}</Button>
             <Button variant="outline-light" onClick={goForward}>{'>'}</Button>
-              <Nav.Link href="/">Home Page</Nav.Link>
+              <Nav.Link><NavLink to='/' style={{textDecoration: 'none', color: "inherit"}}>Home Page</NavLink></Nav.Link>
     
               <NavDropdown title="Categories" id="collasible-nav-dropdown">
                 {categories.map((cat, idx) => (
-                  <NavDropdown.Item href={`/category/${cat}`}>
-                    {cat}
+                  <NavDropdown.Item>
+                    <NavLink to={`/category/${cat}`} style={{textDecoration: 'none', color: "inherit"}}>{cat}</NavLink>
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>

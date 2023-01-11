@@ -16,7 +16,7 @@ export default function Recipes({ recipes }) {
           <Col className="recipes">
             <NavLink to={`/recipe/${val.sys.id}`} style={{textDecoration: 'none', color: "inherit"}}>
             <Card>
-              <Card.Img variant="top" src={val.fields.picture.fields.file.url} />
+              <Card.Img style={{aspectRatio: 1.5 , objectFit : "cover"}} variant="top" src={val.fields.picture.fields.file.url} />
               <Card.Body>
                 <Card.Title>{val.fields.title}</Card.Title>
                 <Card.Text>
