@@ -7,12 +7,11 @@ import '../App.css';
 
 export default function Main({ recipes }) {
   const [index, setIndex] = useState(0); // eslint-disable-line no-unused-vars
-
   console.log(recipes);
 
+  // prettier-ignore
   const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
     setIndex(selectedIndex);
-
   };
 
   return (
@@ -39,8 +38,8 @@ export default function Main({ recipes }) {
                       </NavLink>
                     </Carousel.Caption>
                   </Carousel.Item>
-                }))
-              }
+                );
+              })}
             </Carousel>
           </Col>
         </Row>
