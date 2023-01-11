@@ -15,3 +15,27 @@
     align-self: center;
 }
 
+.carousel {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.caption {
+  background-color: rgb(250, 242, 222);
+  opacity: 0.7;
+  border-radius: 0.5em;
+}
+
+.recipe {
+  display: flex;
+  justify-content: center;
+}
+
+.categories {
+  padding-bottom: 1em;
+}
+
+.padding {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
