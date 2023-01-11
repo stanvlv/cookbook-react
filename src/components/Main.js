@@ -27,7 +27,7 @@ export default function Main({ recipes }) {
                       src={item.fields.picture.fields.file.url}
                       alt={item.fields.picture.fields.description}
                     />
-                    <Carousel.Caption>
+                    <Carousel.Caption className="caption">
                       <h5>{item.fields.title}</h5>
                       <NavLink to={`/recipe/${item.sys.id}`}>
                         <Button variant="dark">More</Button>
