@@ -79,7 +79,7 @@ export default function Header({recipes}) {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-light">Search</Button>
+              <Button variant="outline-light" onClick={onSubmit}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
