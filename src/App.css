@@ -15,3 +15,17 @@
     align-self: center;
 }
 
+.carousel-text {
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.categories-cards {
+  margin-top: 80px !important;
+  margin-bottom: 80px;
+}
+
+.ul-footer {
+  list-style: none;
+}

@@ -28,7 +28,7 @@ export default function Main({ recipes }) {
                       alt={item.fields.picture.fields.description}
                     />
                     <Carousel.Caption>
-                      <h5>{item.fields.title}</h5>
+                      <h5 className="carousel-text">{item.fields.title}</h5>
                       <NavLink to={`/recipe/${item.sys.id}`}>
                         <Button variant="dark">More</Button>
                       </NavLink>
