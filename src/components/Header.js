@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React,{useState} from "react";
 import {
   Button,
   Container,
@@ -8,7 +8,6 @@ import {
   NavDropdown,
 } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
-import data from "../Data";
 import {NavLink} from 'react-router-dom'
 
 export default function Header({recipes}) {
@@ -16,7 +15,6 @@ export default function Header({recipes}) {
   const categories = ["Main", "Dessert", "Salad"];
     
   const [searchInput, setSearchInput] = useState('')
-  const [recipeTitle, setRecipeTitle] = useState([])
    
   const navigate = useNavigate()
   const goBack = () => {

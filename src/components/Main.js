@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Categories from "./Categories";
 
 export default function Main({ recipes }) {
-  const [index, setIndex] = useState(0); // eslint-disable-line no-unused-vars
-  console.log(recipes);
-
+  
   // prettier-ignore
-  const handleSelect = (selectedIndex, e) => { // eslint-disable-line no-unused-vars
-    setIndex(selectedIndex);
-  };
+ 
 
   return (
     <div>
