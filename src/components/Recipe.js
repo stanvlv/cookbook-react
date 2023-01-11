@@ -12,8 +12,8 @@ export default function Recipe({ recipes }) {
   return (
     <div className="recipe">
       <Row>
-        <Col>
-          <Card>
+        <Col className="padding">
+          <Card style={{ width: '50rem' }}>
             <Card.Img
               variant="top"
               src={recipe.fields.picture.fields.file.url}
