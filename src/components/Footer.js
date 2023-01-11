@@ -18,7 +18,7 @@ export default function Footer() {
               <Col>
                 <h5>Presented to you by group 5:</h5>
                 <span>
-                  <ul>
+                  <ul className="ul-footer">
                     <li>Aleksandra</li>
                     <li>Pavel</li>
                     <li>Stanislav</li>

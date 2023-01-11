@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router";
-
+import { NavLink } from "react-router-dom";
 export default function Recipes({ recipes }) {
 
   const { category_name } = useParams();
@@ -13,7 +13,8 @@ export default function Recipes({ recipes }) {
         {recipes
         .filter((val) => val.fields.category === category_name)
         .map((val, idx) => (
-          <Col>
+          <Col className="recipes">
+            <NavLink to={`/recipe/${val.sys.id}`} style={{textDecoration: 'none', color: "inherit"}}>
             <Card>
               <Card.Img variant="top" src={val.fields.picture.fields.file.url} />
               <Card.Body>
@@ -23,6 +24,7 @@ export default function Recipes({ recipes }) {
                 </Card.Text>
               </Card.Body>
             </Card>
+            </NavLink>
           </Col>
         ))}
       </Row>

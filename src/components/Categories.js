@@ -10,9 +10,9 @@ export default function Categories() {
     <div>
       <Row xs={1} md={3} className="g-4">
         {categories.map((cat, idx) => (
-          <Col>
+          <Col className="categories-cards">
             <Card className="text-center">
-              <Card.Img variant="top" src="https://picsum.photos/60/20" />
+              <Card.Img variant="top" src="https://www.iberdrola.com/documents/20125/39904/real_food_746x419.jpg/0c9185fa-b2dd-e1a6-602c-bca55f68e54e?t=1626673209445" />
               <Card.Body>
                 <Card.Title>{cat}</Card.Title>
                 <NavLink to={`/category/${cat}`}>
