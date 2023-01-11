@@ -30,3 +30,7 @@
   display: flex;
   justify-content: center;
 }
+
+.categories {
+  padding-bottom: 1em;
+}

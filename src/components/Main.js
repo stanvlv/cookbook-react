@@ -39,7 +39,7 @@ export default function Main({ recipes }) {
             </Carousel>
           </Col>
         </Row>
-        <Row>
+        <Row className="categories">
           <Categories />
         </Row>
       </Container>
