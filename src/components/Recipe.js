@@ -10,7 +10,7 @@ export default function Recipe({ recipes }) {
   console.log("recipe found: ", recipe);
 
   return (
-    <div>
+    <div className="recipe">
       <Row>
         <Col>
           <Card>
