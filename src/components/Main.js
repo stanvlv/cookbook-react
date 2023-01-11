@@ -23,6 +23,7 @@ export default function Main({ recipes }) {
                 return (
                   <Carousel.Item>
                     <img
+                      style={{aspectRatio: 2 , objectFit : "cover"}}
                       className="d-block w-100"
                       src={item.fields.picture.fields.file.url}
                       alt={item.fields.picture.fields.description}
