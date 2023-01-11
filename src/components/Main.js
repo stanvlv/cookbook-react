@@ -16,19 +16,22 @@ export default function Main({ recipes }) {
   return (
     <div>
       <Container>
-        <Row>
+        <Row className="carousel">
           <Col>
             <Carousel variant="dark">
               {recipes.map((item) => {
                 return (
                   <Carousel.Item>
                     <img
+                      style={{aspectRatio: 2 , objectFit : "cover"}}
                       className="d-block w-100"
                       src={item.fields.picture.fields.file.url}
                       alt={item.fields.picture.fields.description}
                     />
-                    <Carousel.Caption>
-                      <h5 className="carousel-text">{item.fields.title}</h5>
+                    
+                    <Carousel.Caption className="caption">
+                      <h5>{item.fields.title}</h5>
+
                       <NavLink to={`/recipe/${item.sys.id}`}>
                         <Button variant="dark">More</Button>
                       </NavLink>
@@ -39,7 +42,7 @@ export default function Main({ recipes }) {
             </Carousel>
           </Col>
         </Row>
-        <Row>
+        <Row className="categories">
           <Categories />
         </Row>
       </Container>
