@@ -76,7 +76,6 @@ export default function Header({ recipes }) {
                   Home Page
                 </NavLink>
               </Nav.Link>
-
               <NavDropdown title="Categories" id="collasible-nav-dropdown">
                 {categories.map((cat, idx) => (
                   <NavLink to={`/category/${cat}`} className="catLinks">
