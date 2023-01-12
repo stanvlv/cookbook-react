@@ -5,31 +5,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Categories from "./Categories";
 
 export default function Main({ recipes }) {
-  
   // prettier-ignore
- 
 
   return (
     <div>
       <Container>
-        <Row className="carousel">
-          <Col>
-            <Carousel variant="dark">
+        <Row className="carousel justify-content-center">
+          <Col xs={10}>
+            <Carousel fade variant="dark">
               {recipes.map((item) => {
                 return (
                   <Carousel.Item>
                     <img
-                      style={{aspectRatio: 2 , objectFit : "cover"}}
+                      style={{aspectRatio: 2 , objectFit : "cover", borderRadius: 5}}
                       className="d-block w-100"
                       src={item.fields.picture.fields.file.url}
                       alt={item.fields.picture.fields.description}
-                    />
-                    
+                    />                    
                     <Carousel.Caption className="caption">
-                      <h5>{item.fields.title}</h5>
-
+                      <h5 style={{fontWeight: "bold"}}>{item.fields.title}</h5>
                       <NavLink to={`/recipe/${item.sys.id}`}>
-                        <Button variant="dark">More</Button>
+                        <Button variant="dark">See recipe</Button>
                       </NavLink>
                     </Carousel.Caption>
                   </Carousel.Item>
