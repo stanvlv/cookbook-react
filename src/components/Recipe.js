@@ -1,7 +1,8 @@
 import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { useParams } from "react-router";
 import RichText from "./RichText";
+import { NavLink } from "react-router-dom";
 
 export default function Recipe({ recipes }) {
   const { recipe_id } = useParams();
@@ -13,20 +14,26 @@ export default function Recipe({ recipes }) {
     <div className="recipe">
       <Row>
         <Col className="padding">
-          <Card style={{ width: '50rem' }}>
+          <Card style={{ width: "50rem" }}>
             <Card.Img
-            style={{aspectRatio: 1.5 , objectFit : "cover"}}
+              style={{ aspectRatio: 1.5, objectFit: "cover" }}
               variant="top"
               src={recipe.fields.picture.fields.file.url}
             />
             <Card.Body>
-              <Card.Title>{recipe.fields.title}</Card.Title>
-              <Card.Text>
-                <h6>Ingredients</h6>
-                <RichText content={recipe.fields.ingredients} />
-                <h6>Creation steps</h6>
-                <RichText content={recipe.fields.creationSteps} />
-              </Card.Text>
+              <Card.Title className="mb-4">{recipe.fields.title}</Card.Title>
+               <Container>
+                <Row>
+                  <Col>
+                    <h5>Ingredients</h5>
+                    <RichText content={recipe.fields.ingredients} />
+                  </Col>
+                  <Col>
+                    <h5>How it's done</h5>
+                    <RichText content={recipe.fields.creationSteps} />
+                  </Col>
+                </Row>
+              </Container>
             </Card.Body>
           </Card>
         </Col>
