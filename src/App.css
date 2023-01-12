@@ -76,3 +76,11 @@
 .catLinks:not(:last-child) {
   padding-bottom: .5rem;
 }
+
+.recipeLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
