@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useParams } from "react-router";
 import RichText from "./RichText";
-import { NavLink } from "react-router-dom";
 
 export default function Recipe({ recipes }) {
   const { recipe_id } = useParams();
