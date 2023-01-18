@@ -17,6 +17,7 @@ export default function Header({ recipes }) {
 
   const navigate = useNavigate();
   const goBack = () => {
+    console.log("navigate!!!");
     navigate(-1);
   };
   const goForward = () => {
@@ -45,7 +46,7 @@ export default function Header({ recipes }) {
     <div className="sticky-top">
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/">
+          <Navbar.Brand>
             <Button
               variant="outline-light"
               onClick={goBack}
