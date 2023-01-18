@@ -11,7 +11,7 @@ export default function Recipe({ recipes }) {
 
   return (
     <div className="recipe">
-      <Row>
+      { recipe && <Row>
         <Col className="padding">
           <Card style={{ width: "50rem" }}>
             <Card.Img
@@ -36,7 +36,7 @@ export default function Recipe({ recipes }) {
             </Card.Body>
           </Card>
         </Col>
-      </Row>
+      </Row> }
     </div>
   );
 }
